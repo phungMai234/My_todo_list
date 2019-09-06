@@ -40,12 +40,19 @@
         background-color: gray;
         border: none;
         border-right:1px solid whitesmoke;
-        width: 100px;
+        width: 120px;
         padding: 0 8px;
         cursor: pointer;
         color: white;
         align-items: center;
         font-weight: bold;
+        display: flex;
+    }
+    .toolbar .item.delete{
+        width: 80px;
+    }
+    .toolbar .item.edit{
+        width: 80px;
     }
         .toolbar .item:hover {
             background-color: orangered;
@@ -57,6 +64,7 @@
         }
 
 .icon{
+    padding: 0 5px;
     width: 16px;
     height: 16px;
     background: url("../Contents/icons/common-icon.png") no-repeat -2px 0px;
@@ -65,7 +73,7 @@
         background-position: -2px -127px;
     }
     .icon.edit{
-        background: url("../Contents/icons/Edit16.png") no-repeat 0px 1px !important;
+        background-position: -77px -203px;
     }
     .icon.delete{
         background-position:  0px -52px;
@@ -85,7 +93,7 @@
 .table-content
 {
 
-    height: 400px;
+    height: 300px;
     overflow: auto;
 }
 .main-table {
@@ -97,7 +105,7 @@
         background-color: #f2f2f2;
     }
     .main-table tbody tr:hover{
-        background-color: #ddd;
+        background-color: green;
         cursor: pointer;
     }
     .main-table th {
