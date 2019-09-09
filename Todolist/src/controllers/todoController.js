@@ -5,11 +5,12 @@ const db = require('../utils/database');
 async function addNew(req, res){
     const {task} = req.body;
     try{
+        console.log(task);
         if(!task)
-            return res.json('empty');
+            return res.json({success: false});
         const newTask = {
             task:task
-        }
+        };
         const data=await db.TodoModel.create(newTask);
         return res.json(data)
     }
@@ -29,6 +30,7 @@ async function getTask(req, res){
 }
 async function getAllTask(req, res){
     try{
+
         const data = await db.TodoModel.findAll();
         return res.json(data);
     }

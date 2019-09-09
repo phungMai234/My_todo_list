@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const config = require('config');
 const info=config.get('port');
-const db={}
+const db={};
 
 const sequelize = new Sequelize(
         info.name,
@@ -9,7 +9,6 @@ const sequelize = new Sequelize(
         info.password,{
         host: info.host,
         dialect: 'mysql',
-        operatorsAliases: false,
         pool: {
             max: 300,
             min: 0,
@@ -24,7 +23,7 @@ const sequelize = new Sequelize(
         },
         logging: false
     }
-)
+);
 db.sequelize=sequelize;
 db.Sequelize=Sequelize;
 

@@ -127,3 +127,8 @@
     background: url("../Contents/icons/uncheck.png") no-repeat center;
     width: 24px;
 }
+
+input{
+    height: 25px;
+    width: 300px;
+}
