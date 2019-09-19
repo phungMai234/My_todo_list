@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <title>Todolist</title>
     <link rel="stylesheet" href="../CSS/receipt.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
 
     <script src="../Script/Libraries/jquery-3.4.1.js"></script>
+    <script src="../Script/Libraries/jquery-1.12.4.js"></script>
+    <script src="../Script/Libraries/jquery-ui.js"></script>
     <script src="../Script/Views/receipt.js"></script>
-
 
 </head>
 <body>
@@ -21,11 +24,11 @@
             <div class="icon add-new"></div>
             <span>Thêm mới</span>
         </button>
-        <button class="item edit">
+        <button class="item edit" disabled>
             <div class="icon edit"></div>
             <span>Sửa</span>
         </button>
-        <button class="item delete">
+        <button class="item delete" disabled>
             <div class="icon delete"></div>
             <span>Xóa</span>
         </button>
@@ -43,55 +46,16 @@
                 <tbody>
 
                 </tbody>
-                <!--<tbody>
-                    <tr>
-                        <td class="uncheck"></td>
-                        <td>dog</td>
-                    </tr>
-                    <tr>
-                        <td class="uncheck"></td>
-                        <td>dog</td>
-                    </tr>
-                    <tr>
-                        <td class="uncheck"></td>
-                        <td>dog</td>
-                    </tr>
-                    <tr>
-                        <td class="uncheck"></td>
-                        <td>dog</td>
-                    </tr>
-                    <tr>
-                        <td class="uncheck"></td>
-                        <td>dog</td>
-                    </tr>
-                    <tr>
-                        <td class="uncheck"></td>
-                        <td>dog</td>
-                    </tr>
-                    <tr>
-                        <td class="uncheck"></td>
-                        <td>dog</td>
-                    </tr>
-                    <tr>
-                        <td class="uncheck"></td>
-                        <td>dog</td>
-                    </tr>
-                    <tr>
-                        <td class="uncheck"></td>
-                        <td>dog</td>
-                    </tr>
-                    <tr>
-                        <td class="uncheck"></td>
-                        <td>dog</td>
-                    </tr>
-                </tbody>-->
             </table>
         </div>
-        <div>
 
-                <input class="input-text" type="text" placeholder="Nhap text">
-                <button class="submit-text" type="submit">Submit</button>
-
+        <div id="dialog-add" title="Add new todo">
+            <input class="input-text-add" type="text" placeholder="Enter text">
+            <button class="submit-text-add" type="submit">OK</button>
+        </div>
+        <div id="dialog-edit" title="Edit todo">
+            <input class="input-text-edit" type="text" placeholder="Enter text">
+            <button class="submit-text-edit" type="submit">OK</button>
         </div>
     </div>
 
